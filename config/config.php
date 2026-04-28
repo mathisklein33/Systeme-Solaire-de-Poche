@@ -1,7 +1,6 @@
 ﻿<?php
 
-define('BASE_URL', '#');
-
+define('BASE_URL', 'http://localhost/Systeme-Solaire-de-Poche/');
 
 define('ASSETS_URL', BASE_URL . 'assets/');
 define('MODELS_URL', ASSETS_URL . 'models/');
