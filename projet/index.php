@@ -16,7 +16,7 @@
                 Augmentée
             </h1>
             <div class="planet-container position-relative my-5">
-                <img src="assets/img/Systeme-Solaire-de-Poche-main.zip" class="planetes du système solaire">
+                <img src="assets/img/sy.png" class="planetes du système solaire">
             </div>
             <a href="#" class="cta-btn mt-4">Essayez la RA</a>
         </div>
