@@ -53,3 +53,72 @@
     border-top: 1px solid #444;
     font-size: 14px;
 }
+
+.hero {
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #020a2a, #000814);
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu-icon,
+.search-icon {
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.menu-icon:hover,
+.search-icon:hover {
+    opacity: 1;
+}
+
+.hero-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.planet-container {
+    height: 400px;
+}
+
+.planet {
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.planet:hover {
+    transform: scale(1.1);
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 15px;
+    border: 1px solid #aaa;
+    color: white;
+    text-decoration: none;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* ===== STARS (petit effet bonus) ===== */
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+}
