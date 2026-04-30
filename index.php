@@ -20,7 +20,7 @@
 
             <div class="planet-container my-5">
                 <img
-                        src="assets/img/Systeme-Solaire-de-Poche-main.png"
+                        src="assets/images/Systeme-Solaire-de-Poche-main.png"
                         class="planet-img"
                         alt="Planètes du système solaire">
             </div>
