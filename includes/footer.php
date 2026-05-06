@@ -9,10 +9,10 @@
             <div class="col-md-3 mb-4">
                 <h2 class="footer-title">Navigation</h2>
                 <ul class="list-unstyled">
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="about.php">À propos</a></li>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/about.php">À propos</a></li>
                     <li><a href="#">Expérience AR</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/contact.php">Contact</a></li>
                 </ul>
             </div>
             <div class="col-md-3 mb-4">

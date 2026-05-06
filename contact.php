@@ -1,177 +1,111 @@
-﻿<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Expérience AR</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;600&display=swap');
+﻿<?php include 'includes/header.php'; ?>
 
-        :root {
-            --neon-blue: #00f2fe;
-            --deep-space: #050714;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-        }
+<main class="contact-page">
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--deep-space);
-            background-image:
-                    radial-gradient(circle at 10% 10%, rgba(0, 242, 254, 0.05) 0%, transparent 30%),
-                    radial-gradient(circle at 90% 90%, rgba(162, 89, 255, 0.05) 0%, transparent 30%),
-                    radial-gradient(circle at 50% 50%, #0d122b 0%, #050714 100%);
-            color: white;
-            font-family: 'Rajdhani', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+    <!-- Fond décoratif -->
+    <div class="contact-bg" aria-hidden="true">
+        <div class="contact-bg-glow contact-bg-glow--1"></div>
+        <div class="contact-bg-glow contact-bg-glow--2"></div>
+        <div class="contact-bg-grid"></div>
+    </div>
 
-        .contact-container {
-            width: 100%;
-            max-width: 600px;
-            padding: 40px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(15px);
-            border: 1px solid var(--glass-border);
-            border-radius: 30px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
+    <div class="container-xl">
+        <div class="row justify-content-center align-items-center" style="min-height: calc(100vh - 144px);">
+            <div class="col-12 col-md-10 col-lg-7 col-xl-6 py-5">
 
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
-            letter-spacing: 3px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            color: var(--neon-blue);
-        }
+                <!-- En-tête -->
+                <div class="text-center mb-5">
+                    <div class="contact-badge mb-3">
+                        <span class="badge-dot"></span>
+                        Signal actif
+                    </div>
+                    <h1 class="contact-title">Transmission</h1>
+                    <p class="contact-subtitle">Une question, une idée, un projet cosmique ?<br>On t'écoute depuis la Terre.</p>
+                </div>
 
-        p.subtitle {
-            font-weight: 300;
-            color: #a2a2a2;
-            margin-bottom: 30px;
-        }
+                <!-- Carte formulaire -->
+                <div class="contact-card">
 
-        .form-group {
-            text-align: left;
-            margin-bottom: 20px;
-        }
+                    <form action="https://formspree.io/f/mwvyozzv" method="POST" class="contact-form" id="contactForm">
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--neon-blue);
-        }
+                        <div class="cf-group">
+                            <label class="cf-label" for="name">
+                                <span class="cf-label-num">01</span>
+                                Identifiant
+                            </label>
+                            <input
+                                    class="cf-input"
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Ex : Explorer-01"
+                                    required
+                                    autocomplete="name">
+                        </div>
 
-        input, textarea {
-            width: 100%;
-            padding: 12px 15px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--glass-border);
-            border-radius: 10px;
-            color: white;
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 1rem;
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-        }
+                        <div class="cf-group">
+                            <label class="cf-label" for="email">
+                                <span class="cf-label-num">02</span>
+                                Coordonnées
+                            </label>
+                            <input
+                                    class="cf-input"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="nom@galaxie.com"
+                                    required
+                                    autocomplete="email">
+                        </div>
 
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--neon-blue);
-            background: rgba(0, 242, 254, 0.05);
-            box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
-        }
+                        <div class="cf-group">
+                            <label class="cf-label" for="message">
+                                <span class="cf-label-num">03</span>
+                                Message de la mission
+                            </label>
+                            <textarea
+                                    class="cf-input cf-textarea"
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    placeholder="Décris ta mission..."></textarea>
+                        </div>
 
-        button {
-            width: 100%;
-            padding: 15px;
-            margin-top: 10px;
-            background: transparent;
-            border: 1px solid var(--neon-blue);
-            color: var(--neon-blue);
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
+                        <button type="submit" class="cf-submit">
+                            <span class="cf-submit-icon">◉</span>
+                            Envoyer le signal
+                        </button>
 
-        button:hover {
-            background: var(--neon-blue);
-            color: var(--deep-space);
-            box-shadow: 0 0 20px var(--neon-blue);
-        }
+                    </form>
 
-        .contact-info {
-            margin-top: 30px;
-            display: flex;
-            justify-content: space-around;
-            font-size: 0.9rem;
-            border-top: 1px solid var(--glass-border);
-            padding-top: 20px;
-            color: #a2a2a2;
-        }
+                    <!-- Infos bas de carte -->
+                    <div class="contact-info-row">
+                        <div class="contact-info-item">
+                            <div class="contact-info-label">Secteur</div>
+                            <div class="contact-info-value">Terre (Paris)</div>
+                        </div>
+                        <div class="contact-info-sep"></div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-label">Fréquence</div>
+                            <div class="contact-info-value">
+                                <a href="mailto:hello@ar-vision.com">hello@ar-vision.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-sep"></div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-label">Réponse</div>
+                            <div class="contact-info-value">24–48h</div>
+                        </div>
+                    </div>
 
-        .info-item span {
-            display: block;
-            color: white;
-            font-weight: 600;
-        }
+                </div>
+                <!-- /contact-card -->
 
-    </style>
-</head>
-<body>
-
-<div class="contact-container">
-    <h1>Transmission</h1>
-    <p class="subtitle">Prêt à explorer de nouvelles dimensions ?</p>
-
-    <!-- Remplace TON_ID par l'identifiant donné par Formspree -->
-    <form action="https://formspree.io/f/mwvyozzv" method="POST">
-        <div class="form-group">
-            <label for="name">Identifiant (Nom)</label>
-            <!-- AJOUT : l'attribut name="name" est obligatoire pour recevoir la donnée -->
-            <input type="text" id="name" name="name" placeholder="Ex: Explorer-01" required>
-        </div>
-
-        <div class="form-group">
-            <label for="email">Coordonnées (Email)</label>
-            <input type="email" id="email" name="email" placeholder="nom@galaxie.com" required>
-        </div>
-
-        <div class="form-group">
-            <label for="message">Message de la mission</label>
-            <textarea id="message" name="message" rows="4" placeholder="Dites-nous tout..."></textarea>
-        </div>
-
-        <button type="submit">Envoyer le signal</button>
-    </form>
-
-    <div class="contact-info">
-        <div class="info-item">
-            <span>Secteur</span>
-            Terre (Paris)
-        </div>
-        <div class="info-item">
-            <span>Fréquence</span>
-            hello@ar-vision.com
+            </div>
         </div>
     </div>
-</div>
 
-</body>
-</html>
+</main>
+
+
+<?php include 'includes/footer.php'; ?>
