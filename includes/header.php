@@ -12,12 +12,12 @@
     <div class="container-fluid">
         <div class="row align-items-center text-center text-md-start">
             <div class="col-md-4 mb-2 mb-md-0">
-                <a href="#" class="header-btn d-inline-block">
+                <a href="/ar.php" class="header-btn d-inline-block">
 Découvre les planètes et explore-les en réalité augmentée
 </a>
             </div>
             <div class="col-md-4 text-center">
-                <h1 class="header-title m-0">Scanne et explore en AR</h1>
+                <h1 class="header-title m-0"> <span class="gradient-text">Système Solaire</span> en AR</h1>
             </div>
             <div class="col-md-4 text-md-end text-center">
                 <img src="logo.png" alt="Logo" class="header-logo img-fluid">
